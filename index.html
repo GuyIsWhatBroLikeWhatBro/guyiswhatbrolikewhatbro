@@ -1,19 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpongeBob Hijack Hub</title>
     <style>
-        body { background-color: #1a1a1a; color: white; text-align: center; font-family: sans-serif; }
-        .container { margin-top: 50px; }
+        body { 
+            background-color: #0a0a0a; 
+            color: #effd5f; /* SpongeBob Yellow */
+            text-align: center; 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* The Glitch Animation */
+        .glitch {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+            animation: glitch 725ms infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00; }
+            15% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00; }
+            50% { text-shadow: 0.03em 0.035em 0 #00fffc, 0.05em 0.05em 0 #fc00ff, 0.05em -0.05em 0 #fffc00; }
+            100% { text-shadow: -0.025em 0 0 #00fffc, -0.025em -0.025em 0 #fc00ff, -0.025em -0.05em 0 #fffc00; }
+        }
+
+        .btn-container {
+            margin-bottom: 40px;
+        }
+
+        /* Stylized Buttons */
+        .link-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #0a0a0a;
+            background-color: #effd5f;
+            padding: 12px 25px;
+            margin: 10px;
+            font-weight: bold;
+            border: 2px solid #fff;
+            transition: 0.3s;
+            box-shadow: 5px 5px 0px #fc00ff;
+        }
+
+        .link-btn:hover {
+            background-color: #fff;
+            box-shadow: -5px -5px 0px #00fffc;
+            transform: scale(1.05);
+        }
+
+        /* Discord Widget Glow */
+        iframe {
+            border: 2px solid #effd5f;
+            box-shadow: 0px 0px 20px #effd5f;
+            border-radius: 12px;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Welcome to the Takeover</h1>
-        <p>Check out our latest videos and join the crew below!</p>
-
+        <h1 class="glitch">SYSTEM HIJACKED</h1>
+        
+        <div class="btn-container">
+            <a href="https://www.youtube.com/@SpongeEdits-k8t" target="_blank" class="link-btn">WATCH HIJACKS</a>
+            
+            <a href="https://discord.gg/xxGx64GAPR" target="_blank" class="link-btn">JOIN THE CREW</a>
         </div>
+
+        <p style="margin-bottom: 20px; color: #aaa;">[ SERVER STATUS: ONLINE ]</p>
+
+        <iframe src="https://discord.com/widget?id=1495612184967774229&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
 
 </body>
 </html>
